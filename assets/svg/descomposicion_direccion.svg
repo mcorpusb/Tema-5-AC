@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" font-family="Segoe UI, Arial, sans-serif">
+  <text x="300" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Descomposición de una Dirección de Memoria</text>
+  <text x="300" y="40" text-anchor="middle" font-size="10" fill="#64748b">Ejemplo: caché de 256 líneas, bloques de 64 bytes, dirección de 32 bits</text>
+
+  <!-- Dirección completa -->
+  <rect x="40" y="58" width="520" height="40" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+
+  <!-- Etiqueta -->
+  <rect x="42" y="60" width="220" height="36" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="152" y="83" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Etiqueta (Tag)</text>
+
+  <!-- Índice -->
+  <rect x="264" y="60" width="160" height="36" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="344" y="83" text-anchor="middle" font-size="11" fill="#1e40af" font-weight="bold">Índice (Línea)</text>
+
+  <!-- Desplazamiento -->
+  <rect x="426" y="60" width="132" height="36" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="492" y="83" text-anchor="middle" font-size="11" fill="#166534" font-weight="bold">Desplazamiento</text>
+
+  <!-- Bits -->
+  <text x="152" y="115" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">18 bits</text>
+  <text x="344" y="115" text-anchor="middle" font-size="10" fill="#1e40af" font-weight="bold">8 bits</text>
+  <text x="492" y="115" text-anchor="middle" font-size="10" fill="#166534" font-weight="bold">6 bits</text>
+
+  <!-- Posiciones -->
+  <text x="42" y="55" font-size="8" fill="#64748b">31</text>
+  <text x="255" y="55" font-size="8" fill="#64748b">14</text>
+  <text x="265" y="55" font-size="8" fill="#64748b">13</text>
+  <text x="418" y="55" font-size="8" fill="#64748b">6</text>
+  <text x="428" y="55" font-size="8" fill="#64748b">5</text>
+  <text x="553" y="55" font-size="8" fill="#64748b">0</text>
+
+  <!-- Explicaciones -->
+  <line x1="152" y1="120" x2="152" y2="140" stroke="#d97706" stroke-width="1.5"/>
+  <rect x="30" y="142" width="244" height="45" rx="5" fill="#fffbeb"/>
+  <text x="152" y="160" text-anchor="middle" font-size="9" fill="#78350f">Identifica qué bloque de memoria</text>
+  <text x="152" y="175" text-anchor="middle" font-size="9" fill="#78350f">ocupa la línea (se compara con la caché)</text>
+
+  <line x1="344" y1="120" x2="344" y2="140" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="264" y="142" width="160" height="45" rx="5" fill="#eff6ff"/>
+  <text x="344" y="160" text-anchor="middle" font-size="9" fill="#1e3a8a">Selecciona la línea</text>
+  <text x="344" y="175" text-anchor="middle" font-size="9" fill="#1e3a8a">(o conjunto) de la caché</text>
+
+  <line x1="492" y1="120" x2="492" y2="140" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="426" y="142" width="134" height="45" rx="5" fill="#f0fdf4"/>
+  <text x="493" y="160" text-anchor="middle" font-size="9" fill="#14532d">Selecciona el byte</text>
+  <text x="493" y="175" text-anchor="middle" font-size="9" fill="#14532d">dentro del bloque</text>
+
+  <!-- Fórmulas -->
+  <rect x="40" y="200" width="520" height="48" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="300" y="220" text-anchor="middle" font-size="9" fill="#334155">bits_desplaz = log₂(tam_bloque) = log₂(64) = 6    |    bits_índice = log₂(n_líneas) = log₂(256) = 8</text>
+  <text x="300" y="238" text-anchor="middle" font-size="9" fill="#334155">bits_etiqueta = bits_dirección − bits_índice − bits_desplaz = 32 − 8 − 6 = 18</text>
+</svg>

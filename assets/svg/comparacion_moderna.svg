@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 480" font-family="Segoe UI, Arial, sans-serif">
+  <text x="375" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Comparación: Apple Silicon vs ARM (Cortex) vs RISC-V</text>
+
+  <!-- Apple Silicon -->
+  <rect x="20" y="45" width="220" height="415" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="130" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#5b21b6">Apple Silicon</text>
+  <text x="130" y="88" text-anchor="middle" font-size="9" fill="#7c3aed">(M1 / M2 / M3 / M4)</text>
+
+  <rect x="35" y="100" width="190" height="22" rx="3" fill="#ede9fe"/>
+  <text x="130" y="115" text-anchor="middle" font-size="9" fill="#3b0764" font-weight="bold">ISA: ARMv8.x / ARMv9</text>
+  <rect x="35" y="127" width="190" height="22" rx="3" fill="#ddd6fe"/>
+  <text x="130" y="142" text-anchor="middle" font-size="9" fill="#3b0764" font-weight="bold">Microarq: propietaria Apple</text>
+
+  <text x="40" y="172" font-size="9" fill="#475569">L1-I: 192 KB (P-core)</text>
+  <text x="40" y="188" font-size="9" fill="#475569">L1-D: 128 KB (P-core)</text>
+  <text x="40" y="204" font-size="9" fill="#475569">L2: 16-32 MB (compartida)</text>
+  <text x="40" y="220" font-size="9" fill="#475569">SLC: hasta 48 MB</text>
+
+  <rect x="35" y="235" width="190" height="30" rx="4" fill="#c4b5fd"/>
+  <text x="130" y="255" text-anchor="middle" font-size="9" fill="#3b0764" font-weight="bold">Memoria Unificada (UMA)</text>
+
+  <text x="40" y="285" font-size="9" fill="#475569">• LPDDR4X / LPDDR5</text>
+  <text x="40" y="300" font-size="9" fill="#475569">• CPU+GPU+NPU comparten</text>
+  <text x="40" y="315" font-size="9" fill="#475569">• Ancho de banda alto</text>
+  <text x="40" y="330" font-size="9" fill="#475569">• Sin copia CPU↔GPU</text>
+
+  <rect x="35" y="345" width="190" height="22" rx="3" fill="#ede9fe"/>
+  <text x="130" y="360" text-anchor="middle" font-size="9" fill="#5b21b6">TLB multinivel + Huge Pages</text>
+
+  <text x="40" y="390" font-size="9" fill="#16a34a">✓ Rendimiento/vatio líder</text>
+  <text x="40" y="405" font-size="9" fill="#16a34a">✓ Latencia UMA muy baja</text>
+  <text x="40" y="420" font-size="9" fill="#dc2626">✗ Ecosistema cerrado</text>
+  <text x="40" y="435" font-size="9" fill="#dc2626">✗ RAM no ampliable</text>
+  <text x="40" y="450" font-size="9" fill="#94a3b8" font-style="italic">Fuente: Apple Developer</text>
+
+  <!-- ARM Cortex -->
+  <rect x="260" y="45" width="220" height="415" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="370" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">ARM (Cortex)</text>
+  <text x="370" y="88" text-anchor="middle" font-size="9" fill="#3b82f6">(Cortex-A / Neoverse)</text>
+
+  <rect x="275" y="100" width="190" height="22" rx="3" fill="#dbeafe"/>
+  <text x="370" y="115" text-anchor="middle" font-size="9" fill="#1e3a8a" font-weight="bold">ISA: ARMv8 / ARMv9</text>
+  <rect x="275" y="127" width="190" height="22" rx="3" fill="#bfdbfe"/>
+  <text x="370" y="142" text-anchor="middle" font-size="9" fill="#1e3a8a" font-weight="bold">Microarq: diseños de referencia</text>
+
+  <text x="280" y="172" font-size="9" fill="#475569">L1-I: 32-64 KB</text>
+  <text x="280" y="188" font-size="9" fill="#475569">L1-D: 32-64 KB</text>
+  <text x="280" y="204" font-size="9" fill="#475569">L2: 256 KB-1 MB (por core)</text>
+  <text x="280" y="220" font-size="9" fill="#475569">L3: 4-32 MB (compartida)</text>
+
+  <rect x="275" y="235" width="190" height="30" rx="4" fill="#93c5fd"/>
+  <text x="370" y="255" text-anchor="middle" font-size="9" fill="#1e3a8a" font-weight="bold">DRAM convencional</text>
+
+  <text x="280" y="285" font-size="9" fill="#475569">• LPDDR5 / DDR5</text>
+  <text x="280" y="300" font-size="9" fill="#475569">• Memoria separada</text>
+  <text x="280" y="315" font-size="9" fill="#475569">• Flexible y escalable</text>
+  <text x="280" y="330" font-size="9" fill="#475569">• Licenciable a terceros</text>
+
+  <rect x="275" y="345" width="190" height="22" rx="3" fill="#dbeafe"/>
+  <text x="370" y="360" text-anchor="middle" font-size="9" fill="#1e40af">TLB configurable por diseño</text>
+
+  <text x="280" y="390" font-size="9" fill="#16a34a">✓ Ecosistema amplio</text>
+  <text x="280" y="405" font-size="9" fill="#16a34a">✓ Big.LITTLE / DynamIQ</text>
+  <text x="280" y="420" font-size="9" fill="#dc2626">✗ ISA propietaria (licencia)</text>
+  <text x="280" y="435" font-size="9" fill="#dc2626">✗ Menos control que Apple</text>
+  <text x="280" y="450" font-size="9" fill="#94a3b8" font-style="italic">Fuente: Arm Developer</text>
+
+  <!-- RISC-V -->
+  <rect x="500" y="45" width="230" height="415" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="615" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">RISC-V</text>
+  <text x="615" y="88" text-anchor="middle" font-size="9" fill="#10b981">(ISA abierta)</text>
+
+  <rect x="515" y="100" width="200" height="22" rx="3" fill="#d1fae5"/>
+  <text x="615" y="115" text-anchor="middle" font-size="9" fill="#064e3b" font-weight="bold">ISA: RV64GC + extensiones</text>
+  <rect x="515" y="127" width="200" height="22" rx="3" fill="#a7f3d0"/>
+  <text x="615" y="142" text-anchor="middle" font-size="9" fill="#064e3b" font-weight="bold">Microarq: varía por fabricante</text>
+
+  <text x="520" y="172" font-size="9" fill="#475569">L1: configurable (16-64 KB típ.)</text>
+  <text x="520" y="188" font-size="9" fill="#475569">L2: configurable</text>
+  <text x="520" y="204" font-size="9" fill="#475569">L3: depende implementación</text>
+  <text x="520" y="220" font-size="9" fill="#475569">No prescrito por la ISA</text>
+
+  <rect x="515" y="235" width="200" height="30" rx="4" fill="#6ee7b7"/>
+  <text x="615" y="255" text-anchor="middle" font-size="9" fill="#064e3b" font-weight="bold">Modelo RISC-V open (RVWMO)</text>
+
+  <text x="520" y="285" font-size="9" fill="#475569">• Modelo mem. débil (RVWMO)</text>
+  <text x="520" y="300" font-size="9" fill="#475569">• Sv39/Sv48/Sv57 paginación</text>
+  <text x="520" y="315" font-size="9" fill="#475569">• Extensible por diseño</text>
+  <text x="520" y="330" font-size="9" fill="#475569">• Caché no prescrita por ISA</text>
+
+  <rect x="515" y="345" width="200" height="22" rx="3" fill="#d1fae5"/>
+  <text x="615" y="360" text-anchor="middle" font-size="9" fill="#065f46">TLB: Sv39/48 walking hw/sw</text>
+
+  <text x="520" y="390" font-size="9" fill="#16a34a">✓ ISA libre y abierta</text>
+  <text x="520" y="405" font-size="9" fill="#16a34a">✓ Personalizable al 100%</text>
+  <text x="520" y="420" font-size="9" fill="#dc2626">✗ Ecosistema inmaduro</text>
+  <text x="520" y="435" font-size="9" fill="#dc2626">✗ Menor rendim. actual</text>
+  <text x="520" y="450" font-size="9" fill="#94a3b8" font-style="italic">Fuente: riscv.org specs</text>
+</svg>

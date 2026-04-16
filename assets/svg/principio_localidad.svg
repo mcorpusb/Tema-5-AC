@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <text x="350" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Principio de Localidad</text>
+
+  <!-- Localidad temporal -->
+  <rect x="20" y="45" width="310" height="230" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="175" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Localidad Temporal</text>
+  <text x="175" y="95" text-anchor="middle" font-size="10" fill="#475569">"Si accedí a un dato recientemente,</text>
+  <text x="175" y="110" text-anchor="middle" font-size="10" fill="#475569">es probable que vuelva a acceder pronto"</text>
+
+  <!-- Timeline temporal -->
+  <line x1="50" y1="150" x2="300" y2="150" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="305" y="154" font-size="9" fill="#64748b">t</text>
+
+  <circle cx="80" cy="150" r="6" fill="#2563eb"/>
+  <text x="80" y="140" text-anchor="middle" font-size="9" fill="#2563eb">A</text>
+  <circle cx="130" cy="150" r="6" fill="#dc2626"/>
+  <text x="130" y="140" text-anchor="middle" font-size="9" fill="#dc2626">B</text>
+  <circle cx="170" cy="150" r="6" fill="#2563eb"/>
+  <text x="170" y="140" text-anchor="middle" font-size="9" fill="#2563eb">A</text>
+  <circle cx="220" cy="150" r="6" fill="#2563eb"/>
+  <text x="220" y="140" text-anchor="middle" font-size="9" fill="#2563eb">A</text>
+  <circle cx="265" cy="150" r="6" fill="#dc2626"/>
+  <text x="265" y="140" text-anchor="middle" font-size="9" fill="#dc2626">B</text>
+
+  <text x="175" y="185" text-anchor="middle" font-size="10" fill="#1e40af" font-weight="bold">Ejemplo: variable de un bucle</text>
+  <text x="175" y="200" text-anchor="middle" font-size="9" fill="#475569">for (i=0; i&lt;N; i++)</text>
+  <text x="175" y="215" text-anchor="middle" font-size="9" fill="#475569">→ 'i' se accede en cada iteración</text>
+
+  <rect x="50" y="230" width="250" height="30" rx="5" fill="#dbeafe"/>
+  <text x="175" y="250" text-anchor="middle" font-size="9" fill="#1e3a8a">🔑 Mismos datos reutilizados en poco tiempo</text>
+
+  <!-- Localidad espacial -->
+  <rect x="370" y="45" width="310" height="230" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="525" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">Localidad Espacial</text>
+  <text x="525" y="95" text-anchor="middle" font-size="10" fill="#475569">"Si accedí a una dirección,</text>
+  <text x="525" y="110" text-anchor="middle" font-size="10" fill="#475569">es probable que acceda a direcciones cercanas"</text>
+
+  <!-- Memory blocks -->
+  <rect x="400" y="135" width="30" height="25" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <text x="415" y="152" text-anchor="middle" font-size="8" fill="#14532d">0</text>
+  <rect x="430" y="135" width="30" height="25" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="445" y="152" text-anchor="middle" font-size="8" fill="#14532d" font-weight="bold">1</text>
+  <rect x="460" y="135" width="30" height="25" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="475" y="152" text-anchor="middle" font-size="8" fill="#14532d" font-weight="bold">2</text>
+  <rect x="490" y="135" width="30" height="25" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="505" y="152" text-anchor="middle" font-size="8" fill="#14532d" font-weight="bold">3</text>
+  <rect x="520" y="135" width="30" height="25" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="535" y="152" text-anchor="middle" font-size="8" fill="#14532d" font-weight="bold">4</text>
+  <rect x="550" y="135" width="30" height="25" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <text x="565" y="152" text-anchor="middle" font-size="8" fill="#14532d">5</text>
+  <rect x="580" y="135" width="30" height="25" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <text x="595" y="152" text-anchor="middle" font-size="8" fill="#14532d">6</text>
+  <rect x="610" y="135" width="30" height="25" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <text x="625" y="152" text-anchor="middle" font-size="8" fill="#14532d">7</text>
+
+  <text x="525" y="185" text-anchor="middle" font-size="10" fill="#166534" font-weight="bold">Ejemplo: recorrido de un array</text>
+  <text x="525" y="200" text-anchor="middle" font-size="9" fill="#475569">a[0], a[1], a[2], a[3]…</text>
+  <text x="525" y="215" text-anchor="middle" font-size="9" fill="#475569">→ posiciones contiguas en memoria</text>
+
+  <rect x="400" y="230" width="250" height="30" rx="5" fill="#dcfce7"/>
+  <text x="525" y="250" text-anchor="middle" font-size="9" fill="#14532d">🔑 Datos cercanos accedidos juntos</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" font-family="Segoe UI, Arial, sans-serif">
+  <text x="350" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Write-Through vs Write-Back</text>
+
+  <!-- Write-Through -->
+  <rect x="20" y="40" width="310" height="300" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="175" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Write-Through</text>
+  <text x="175" y="88" text-anchor="middle" font-size="9" fill="#475569">(Escritura simultánea)</text>
+
+  <defs>
+    <marker id="aR" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#3b82f6"/>
+    </marker>
+    <marker id="aR2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- CPU -->
+  <rect x="120" y="105" width="110" height="35" rx="5" fill="#1e40af" stroke="#1e3a8a" stroke-width="1.5"/>
+  <text x="175" y="127" text-anchor="middle" font-size="11" fill="white" font-weight="bold">CPU (write)</text>
+
+  <!-- Caché WT -->
+  <rect x="120" y="165" width="110" height="35" rx="5" fill="#60a5fa" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="175" y="187" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Caché</text>
+
+  <!-- Memoria WT -->
+  <rect x="120" y="225" width="110" height="35" rx="5" fill="#93c5fd" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="175" y="247" text-anchor="middle" font-size="10" fill="#1e3a8a" font-weight="bold">Mem. Principal</text>
+
+  <!-- Flechas WT -->
+  <line x1="175" y1="140" x2="175" y2="163" stroke="#3b82f6" stroke-width="2" marker-end="url(#aR)"/>
+  <line x1="175" y1="200" x2="175" y2="223" stroke="#3b82f6" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="250" y="155" font-size="9" fill="#2563eb">Escribe</text>
+  <text x="250" y="215" font-size="9" fill="#2563eb">Escribe SIEMPRE</text>
+
+  <!-- Ventajas WT -->
+  <text x="40" y="280" font-size="9" fill="#16a34a">✓ Coherencia sencilla</text>
+  <text x="40" y="295" font-size="9" fill="#16a34a">✓ Recuperación ante fallos</text>
+  <text x="40" y="310" font-size="9" fill="#dc2626">✗ Más tráfico al bus</text>
+  <text x="40" y="325" font-size="9" fill="#dc2626">✗ Más lento en escritura</text>
+
+  <!-- Write-Back -->
+  <rect x="370" y="40" width="310" height="300" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="525" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">Write-Back</text>
+  <text x="525" y="88" text-anchor="middle" font-size="9" fill="#475569">(Escritura diferida / post-escritura)</text>
+
+  <!-- CPU WB -->
+  <rect x="470" y="105" width="110" height="35" rx="5" fill="#991b1b" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="525" y="127" text-anchor="middle" font-size="11" fill="white" font-weight="bold">CPU (write)</text>
+
+  <!-- Caché WB -->
+  <rect x="470" y="165" width="110" height="35" rx="5" fill="#f87171" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="525" y="183" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Caché</text>
+  <text x="525" y="195" text-anchor="middle" font-size="8" fill="#fef2f2">(bit dirty)</text>
+
+  <!-- Memoria WB -->
+  <rect x="470" y="225" width="110" height="35" rx="5" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="525" y="247" text-anchor="middle" font-size="10" fill="#7f1d1d" font-weight="bold">Mem. Principal</text>
+
+  <!-- Flechas WB -->
+  <line x1="525" y1="140" x2="525" y2="163" stroke="#dc2626" stroke-width="2" marker-end="url(#aR2)"/>
+  <text x="595" y="155" font-size="9" fill="#991b1b">Escribe</text>
+
+  <line x1="525" y1="200" x2="525" y2="223" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aR2)"/>
+  <text x="595" y="215" font-size="9" fill="#991b1b">Solo al expulsar</text>
+
+  <!-- Ventajas WB -->
+  <text x="390" y="280" font-size="9" fill="#16a34a">✓ Menos tráfico al bus</text>
+  <text x="390" y="295" font-size="9" fill="#16a34a">✓ Escrituras más rápidas</text>
+  <text x="390" y="310" font-size="9" fill="#dc2626">✗ Coherencia más compleja</text>
+  <text x="390" y="325" font-size="9" fill="#dc2626">✗ Necesita bit dirty</text>
+</svg>
