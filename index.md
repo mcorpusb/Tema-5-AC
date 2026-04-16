@@ -400,25 +400,34 @@ Es decir: cada acceso cuesta el tiempo de acierto de L1, más la fracción de fa
 
 ### 5.3.8. Rendimiento cuantitativo de la caché
 
+
 #### Tiempo de CPU y stalls de memoria
 
 El tiempo total de CPU para ejecutar un programa es:
 
-$$T_{CPU} = (Ciclos_{CPU} + Ciclos_{stall\_memoria}) \times T_{ciclo}$$
+\[
+T_{CPU} = (Ciclos_{CPU} + Ciclos_{stall_{memoria}}) \times T_{ciclo}
+\]
 
-donde los stalls de memoria son los ciclos en los que el procesador queda bloqueado esperando datos. Se pueden calcular como:
+donde los $Ciclos_{stall_{memoria}}$ son los ciclos en los que el procesador queda bloqueado esperando datos. Se pueden calcular como:
 
-$$Ciclos_{stall\_memoria} = N_{accesos\_memoria} \times m \times p_f$$
+\[
+Ciclos_{stall_{memoria}} = N_{accesos_{memoria}} \times m \times p_f
+\]
 
 O, expresado por instrucción:
 
-$$CPI_{total} = CPI_{ideal} + \frac{N_{accesos\_memoria}}{N_{instrucciones}} \times m \times p_f$$
+\[
+CPI_{total} = CPI_{ideal} + \frac{N_{accesos_{memoria}}}{N_{instrucciones}} \times m \times p_f
+\]
 
-$$CPI_{total} = CPI_{ideal} + CPI_{memoria}$$
+\[
+CPI_{total} = CPI_{ideal} + CPI_{memoria}
+\]
 
 **Variables:**
 - $CPI_{ideal}$: ciclos por instrucción sin considerar la memoria (solo ejecución).
-- $N_{accesos\_memoria} / N_{instrucciones}$: número medio de accesos a memoria por instrucción (típicamente 1 para instrucciones + 0,3-0,5 para datos en un programa medio, es decir, alrededor de 1,3-1,5).
+- $\frac{N_{accesos_{memoria}}}{N_{instrucciones}}$: número medio de accesos a memoria por instrucción (típicamente 1 para instrucciones + 0,3-0,5 para datos en un programa medio, es decir, alrededor de 1,3-1,5).
 - $m$: tasa de fallos de la caché.
 - $p_f$: penalización de fallo en ciclos.
 
@@ -431,11 +440,15 @@ $$CPI_{total} = CPI_{ideal} + CPI_{memoria}$$
 >
 > Cálculo:
 >
-> $CPI_{memoria} = 1{,}3 \times 0{,}02 \times 100 = 2{,}6$ ciclos
+> \[
+> CPI_{memoria} = 1{,}3 \times 0{,}02 \times 100 = 2{,}6
+> \]
 >
-> $CPI_{total} = 1 + 2{,}6 = 3{,}6$ ciclos
+> \[
+> CPI_{total} = 1 + 2{,}6 = 3{,}6
+> \]
 >
-> **Interpretación:** la memoria más que triplica el CPI. Un 2% de fallos, que parece pequeño, provoca que los stalls de memoria dominen el rendimiento. Esto demuestra la importancia crítica de optimizar la jerarquía de memoria.
+> **Interpretación:** la memoria más que triplica el $CPI$. Un 2\% de fallos, que parece pequeño, provoca que los stalls de memoria dominen el rendimiento. Esto demuestra la importancia crítica de optimizar la jerarquía de memoria.
 
 #### Efecto de cada parámetro en el rendimiento
 
