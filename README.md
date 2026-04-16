@@ -10,7 +10,7 @@ Este repositorio contiene el desarrollo completo del **Tema 5: Rendimiento de la
 
 ```
 .
-├── tema5_jerarquia_memoria.md   ← Documento principal (todas las secciones)
+├── index.md   ← Documento principal (todas las secciones)
 ├── README.md                     ← Este archivo
 ├── referencias.md                ← Bibliografía ampliada y enlaces
 ├── build_report.md               ← Informe de construcción del repositorio

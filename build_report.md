@@ -42,7 +42,7 @@
 | Descomp. dirección | `descomposicion_direccion.svg` | 32 bits: etiqueta/índice/desplazamiento |
 
 ### Fase 4: Redacción del documento principal
-- Se redactó `tema5_jerarquia_memoria.md` con todas las secciones (5.1-5.6).
+- Se redactó `index.md` con todas las secciones (5.1-5.6).
 - Cada sección sigue el método didáctico: definición → explicación intuitiva → explicación técnica → ejemplo técnico → analogía cotidiana → importancia → mini conclusión.
 - Se incluyeron las fórmulas con definición completa de variables e interpretación.
 - Se referenciaron los diagramas SVG con rutas relativas.
