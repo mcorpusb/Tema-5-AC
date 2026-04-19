@@ -60,6 +60,21 @@ Cada sección se apoya en la anterior: la jerarquía de memoria (5.2) motiva la 
 
 ## 5.1. Introducción
 
+El rendimiento de un sistema moderno no se explica sólo por la velocidad del procesador. La CPU puede ejecutar instrucciones más rápido de lo que la memoria puede suministrar datos: esta brecha se conoce como el *muro de memoria*.
+
+> **La limitación dominante ya no es “calcular”, sino “mover datos”.**
+
+En este tema veremos:
+- Localidad temporal y espacial
+- Caché y organización de la jerarquía de memoria
+- Tiempo Medio de Acceso (TMA) y penalización por fallo
+- Estrategias para reducir fallos y latencia
+- Implicaciones en arquitecturas actuales
+
+> **Nota didáctica:** esta idea puede presentarse con una metáfora de “repostaje”: la caché actúa como un depósito pequeño y cercano (datos rápidos), mientras que la RAM es un depósito grande pero lejano (datos lentos). La jerarquía existe para reducir viajes y esperas.
+
+
+
 ### 5.1.1. El problema fundamental: la brecha procesador-memoria
 
 En las últimas décadas, la velocidad de los procesadores ha crecido mucho más rápido que la de las memorias DRAM. Mientras que el rendimiento de los procesadores se duplicaba cada uno o dos años, la latencia de la DRAM solo mejoraba alrededor de un 7% anual. Esta divergencia, denominada **memory wall** (muro de memoria), tiene una consecuencia directa: si el procesador tuviera que esperar a la memoria principal en cada acceso, pasaría la mayor parte del tiempo bloqueado, desaprovechando su capacidad de cómputo.
