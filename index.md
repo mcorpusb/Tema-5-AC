@@ -1485,3 +1485,4 @@ Los **principios fundamentales** siguen siendo los mismos:
 ### Conclusión
 
 Los principios que se estudian en el temario clásico no solo siguen siendo válidos, sino que son **imprescindibles** para entender las arquitecturas actuales. Lo que ha cambiado no son los principios, sino la **escala**, la **sofisticación** y el **contexto** de su aplicación. Un alumno que entienda bien el TMA, las tres C, las políticas de escritura y la paginación está perfectamente equipado para comprender los diseños más avanzados de Apple Silicon, ARM y RISC-V.
+
